@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 
-// const { Map: LeafletMap, TileLayer, Marker, Popup } = ReactLeaflet;
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
-// const { LeafletMap } = Map;
 
 class EarthquakeMap extends Component {
   state = {
@@ -15,7 +13,6 @@ class EarthquakeMap extends Component {
     const positionCentre = [this.state.lat, this.state.lng];
 
     return (
-      // <LeafletMap center={position} zoom={this.state.zoom}>
       <Map center={positionCentre} zoom={4} className="leaflet-container">
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -33,7 +30,6 @@ class EarthquakeMap extends Component {
           );
         })}
       </Map>
-      // </LeafletMap>
     );
   }
 }

@@ -7,7 +7,6 @@ function EarthquakeCard(props) {
     <div>
       <h3>{id}</h3>
       <h3>Location of earthquake: {place}</h3>
-      <h3>Time of earthquake: {Date(time)}</h3>
       <h3>Time of earthquake: {new Date(time).toDateString()}</h3>
       <h3>Magnitude of earthquake: {mag}</h3>
       <h3>Link to information about earthquake: {url}</h3>
