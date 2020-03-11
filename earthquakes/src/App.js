@@ -20,7 +20,7 @@ class App extends React.Component {
   };
   render() {
     console.log(this.state);
-    const { earthquakes, isLoading, earthquakeCount } = this.state;
+    const { earthquakes, isLoading, earthquakeCount, query } = this.state;
     return (
       <div className="App">
         <Header />
@@ -36,6 +36,7 @@ class App extends React.Component {
             <EarthquakeList
               earthquakes={earthquakes}
               earthquakeCount={earthquakeCount}
+              query={query}
             />
             <EarthquakeMap earthquakes={earthquakes} />
           </>
