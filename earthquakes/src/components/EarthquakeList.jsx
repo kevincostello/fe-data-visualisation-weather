@@ -1,6 +1,5 @@
 import React from "react";
 import EarthquakeCard from "./EarthquakeCard";
-import EarthquakeMap from "./EarthquakeMap";
 
 function EarthquakeList(props) {
   const { earthquakes } = props;
@@ -8,13 +7,11 @@ function EarthquakeList(props) {
     <div>
       <h2>List of earthquakes</h2>
       <ul>
-        {console.log(props)}
         {earthquakes.map(earthquake => {
           return (
             <section key={earthquake.id}>
               <li>
                 <EarthquakeCard earthquake={earthquake} />
-                {/* <EarthquakeMap earthquake={earthquake} /> */}
               </li>
             </section>
           );

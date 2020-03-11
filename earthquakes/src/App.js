@@ -18,10 +18,6 @@ class App extends React.Component {
           <>
             <EarthquakeList earthquakes={earthquakes} />
             <EarthquakeMap earthquakes={earthquakes} />
-            {/* <body>
-              <div id="container"></div>
-            </body> */}
-            {/* <EarthquakeMap /> */}
           </>
         )}
       </div>
@@ -115,9 +111,8 @@ class App extends React.Component {
 
   getEarthquakeData = () => {
     const url =
-      "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2014-01-01&endtime=2014-01-02&limit=50";
+      "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2014-01-01&endtime=2014-01-02&limit=20";
     axios.get(url).then(({ data }) => {
-      console.log("data:", data.features);
       this.setState({ earthquakes: data.features, isLoading: false });
     });
   };
