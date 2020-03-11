@@ -12,9 +12,9 @@ function EarthquakeList(props) {
         {earthquakes.map(earthquake => {
           return (
             <section key={earthquake.id}>
-              <li className="leaflet-container">
+              <li>
                 <EarthquakeCard earthquake={earthquake} />
-                <EarthquakeMap earthquake={earthquake} />
+                {/* <EarthquakeMap earthquake={earthquake} /> */}
               </li>
             </section>
           );
